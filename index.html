@@ -3,3 +3,197 @@ visionscopecollective/
 ├── style.css
 ├── script.js
 └── images/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>visionscope collective</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    font-family:"Inter",sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    text-transform:lowercase;
+}
+
+/* subtle background noise */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    opacity:.03;
+    background-image:
+    radial-gradient(circle,#fff 1px,transparent 1px);
+    background-size:32px 32px;
+}
+
+/* circle */
+
+.circle{
+    position:absolute;
+    width:520px;
+    height:520px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:50%;
+    animation:rotate 40s linear infinite;
+}
+
+@keyframes rotate{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+.container{
+    text-align:center;
+    max-width:650px;
+    padding:40px;
+    z-index:2;
+}
+
+.star{
+    font-size:28px;
+    margin-bottom:35px;
+    opacity:.8;
+}
+
+h1{
+    font-weight:300;
+    font-size:72px;
+    letter-spacing:12px;
+    margin-bottom:18px;
+    text-shadow:0 0 25px rgba(255,255,255,.15);
+}
+
+.line{
+    width:120px;
+    height:1px;
+    background:#fff;
+    opacity:.25;
+    margin:25px auto;
+}
+
+h2{
+    font-size:20px;
+    font-weight:400;
+    letter-spacing:8px;
+    opacity:.85;
+    margin-bottom:45px;
+}
+
+p{
+    color:#bfbfbf;
+    line-height:2;
+    font-size:15px;
+    letter-spacing:2px;
+}
+
+.loading{
+    margin:70px auto 0;
+    width:260px;
+    height:1px;
+    background:#333;
+    overflow:hidden;
+}
+
+.loading span{
+    display:block;
+    width:40%;
+    height:100%;
+    background:white;
+    animation:loading 2s infinite ease-in-out;
+}
+
+@keyframes loading{
+    from{
+        transform:translateX(-120%);
+    }
+    to{
+        transform:translateX(350%);
+    }
+}
+
+.footer{
+    margin-top:70px;
+    color:#777;
+    letter-spacing:8px;
+    font-size:12px;
+}
+
+@media(max-width:700px){
+
+h1{
+    font-size:42px;
+    letter-spacing:6px;
+}
+
+h2{
+    font-size:15px;
+}
+
+p{
+    font-size:13px;
+}
+
+.circle{
+    width:340px;
+    height:340px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="circle"></div>
+
+<div class="container">
+
+<div class="star">✦</div>
+
+<h1>visionscope collective</h1>
+
+<div class="line"></div>
+
+<h2>work in progress</h2>
+
+<p>
+we're building a creative collective<br>
+focused on games, music, storytelling,<br>
+art, software, and everything in between.
+</p>
+
+<div class="loading">
+<span></span>
+</div>
+
+<div class="footer">
+create &nbsp;&nbsp;&nbsp; inspire &nbsp;&nbsp;&nbsp; connect
+</div>
+
+</div>
+
+</body>
+</html>
